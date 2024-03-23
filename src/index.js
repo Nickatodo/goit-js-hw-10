@@ -8,7 +8,7 @@ const catInfo = document.querySelector(".cat-info");
 
 async function getCats() { 
     try {
-        cats = await fetchBreeds();
+        let cats = await fetchBreeds();
         const options = cats.map(cat => ({ text: cat.name, value: cat.id }));
         new SlimSelect({
             select: '.breed-select',
